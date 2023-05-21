@@ -1,0 +1,16 @@
+<div class="custom-navbar">
+
+    <!-- <div [ngStyle]="{'margin-left': !this.actionTriger._opened ? '50px' : ''}"> -->
+    <div>
+        <span (click)="sidenavToggle.emit()" class="pi pi-bars" style="cursor: pointer;"></span>
+        <span class="ml-5 font-bold">Dashboard Monitoring System</span>
+    </div>
+
+    <div (click)="menu.toggle($event)">
+        <p-menu #menu [model]="items" [popup]="true" appendTo="body"></p-menu>
+        <i class="pi pi-user" style="font-size: 0.8rem"></i>
+        <span style="font-size: 12px; padding: 10px; cursor: pointer;">{{ userData.role }}</span>
+        <i class="pi pi-chevron-down" style="font-size: 0.6rem"></i>
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+.custom-navbar {
+    display: flex;
+    height: 65px;
+    background-color: white;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+::ng-deep .p-menu {
+    width: 10rem !important;
+}
+
+::ng-deep .p-menu ul {
+    font-size: 14px !important;
+}

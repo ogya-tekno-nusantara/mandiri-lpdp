@@ -1,0 +1,27 @@
+<div class="mat-sidenav">
+    
+    <div class="menu">
+        <div class="menu-items">
+            <ng-container *ngFor="let headMenu of menuItems; let i = index;">
+                <span class="items" [ngClass]="activeIndex == i ? 'active' : ''" (click)="onClickItems(i)">
+                    <i [ngClass]="headMenu.icon"></i>
+                </span>
+            </ng-container>
+        </div>
+
+        <div class="menu-item-content">
+
+            <div class="header">
+                <img class="img-header" [src]="logoLpdp" />
+            </div>
+
+            <div class="title-menu">
+                <ng-container *ngFor="let subMenu of subMenuItems; let i = index;">
+                    <span style="font-weight: 600; margin-left: 10px;">{{ subMenu.label }}</span>
+                    <p-panelMenu [multiple]="false" [model]="subMenu.items" [style]="{'width':'100%','margin-top':'2px'}"></p-panelMenu>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    
+</div>

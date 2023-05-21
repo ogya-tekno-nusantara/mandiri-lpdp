@@ -1,0 +1,101 @@
+<div class="flex align-items-center justify-content-between breadcumb-custom">
+    <h4 class="text-lg font-bold">Dashboard VA</h4>
+    <p-breadcrumb class="max-w-full" [model]="breadcumbdItems" [home]="home"></p-breadcrumb>
+</div>
+
+<div class="grid p-5">
+    <!-- period -->
+    <div class="col-12 md:col-12">
+        <div class="custom-card">
+            <div class="grid">
+                <div class="col-12 md:col-6">
+                    <div class="grid">
+                        <div class="col-12 md:col-5">
+                            <label for="icon"> Periode Awal</label>
+                            <p-calendar class="p-inputtext-sm" [style]="{'width':'100%'}" id="date" [(ngModel)]="date" dateFormat="yy-mm-dd" [readonlyInput]="true" inputId="icon"></p-calendar>
+                        </div>
+                        <div class="col-12 md:col-5">
+                            <label for="icon"> Periode Akhir</label>
+                            <p-calendar class="p-inputtext-sm" [style]="{'width':'100%'}" id="date" [(ngModel)]="date" dateFormat="yy-mm-dd" [readonlyInput]="true" inputId="icon"></p-calendar>
+                        </div>
+                        <div class="col-12 md:col-2" style="padding-top: 39.5px;">
+                            <p-button icon="pi pi-search" label="Cari" styleClass="p-button-sm w-full" ></p-button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- balance -->
+    <div class="col-12 md:col-12">
+        <div class="custom-card">
+            <div class="grid">
+                <div class="col-12 md:col-4 flex align-items-center justify-content-start md:justify-content-center">
+                    <p-avatar icon="pi pi-wallet" shape="circle" styleClass="mr-4" size="large" [style]="{'background-color':'#e6edf7', 'color': '#608dff'}"></p-avatar>
+                    <div class="balance">
+                        <span class="text-xs">Jumlah Nominal Pokok</span>
+                        <h5 class="text-lg mb-0 font-semibold">Rp. 800.000.000</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-4 flex align-items-center justify-content-start md:justify-content-center">
+                    <p-avatar icon="pi pi-wallet" shape="circle" styleClass="mr-4" size="large" [style]="{'background-color':'#fff9bc', 'color': '#ffca60'}"></p-avatar>
+                    <div class="balance">
+                        <span class="text-xs">Jumlah Nominal Bunga</span>
+                        <h5 class="text-lg mb-0 font-semibold">Rp. 18.000.000</h5>
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-4 flex align-items-center justify-content-start md:justify-content-center">
+                    <p-avatar icon="pi pi-wallet" shape="circle" styleClass="mr-4" size="large" [style]="{'background-color':'#cffcd9', 'color': '#4de2ac'}"></p-avatar>
+                    <div class="balance">
+                        <span class="text-xs">Jumlah Nominal Total</span>
+                        <h5 class="text-lg mb-0 font-semibold">Rp. 818.000.000</h5>
+                    </div>
+                    <i class="pi pi-arrow-right ml-2 mt-2 hidden md:block" style="font-size: 1rem; font-weight: bold;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- chart doughnut -->
+    <div class="col-12 md:col-12">
+        <div class="custom-card">
+            <h4 class="text-lg">Rekap Pembayaran</h4>
+            <div class="grid">
+                <div class="col-12 md:col-6 align-items-center justify-content-center block mx-auto" style="width: 30%;">
+                    <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>
+                </div>
+
+                <div class="col-12 md:col-6 align-items-center justify-content-center">
+                    <div style="border: 1px solid #dee4ea; padding: 0px; margin-top: 100px;">
+                        <div class="w-full align-items-center">
+                            <div class="flex flex-column sm:flex-row justify-content-between align-items-center flex-1 p-4 border-bottom">
+                                <div>
+                                    <h4 class="text-sm mb-0 font-semibold">Jumlah Paid</h4>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm mb-0 font-bold">Rp. 640.000.000</h4>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-column sm:flex-row justify-content-between align-items-center flex-1 p-4">
+                                <div>
+                                    <h4 class="text-sm mb-0 font-semibold">Jumlah Unpaid</h4>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm mb-0 font-bold">Rp. 178.000.000</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

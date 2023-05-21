@@ -1,0 +1,55 @@
+
+/* primeng style custom */
+
+.p-breadcrumb {
+    background: unset !important;
+    border: unset !important;
+    border-radius: unset !important;
+    padding: unset !important;
+}
+
+.grid {
+    margin-right: unset !important;
+    margin-left: unset !important;
+    margin-top: unset !important;
+}
+
+.p-datatable-table thead th {
+    background-color: #EFF3F8 !important;
+}
+
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even) {
+    background: #EFF3F8 !important;
+}
+
+.p-paginator {
+    justify-content: end !important;
+}
+
+/* end */
+
+body {
+    font-family: var(--font-family);
+}
+
+.custom-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 7.3rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    padding: 20px !important;
+    justify-content: center;
+}
+
+.breadcumb-custom {
+    padding: 2.4rem 2.4rem 0 2.4rem;
+}
+
+.card {
+    overflow-y: hidden;
+}

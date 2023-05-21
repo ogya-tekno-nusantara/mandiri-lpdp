@@ -1,0 +1,9 @@
+.form-table {
+    border: 0.1px solid #dee4ea;
+    table-layout: fixed;
+    min-width: 1000px;
+}
+
+.form-table th, td {
+    padding: 15px;
+}

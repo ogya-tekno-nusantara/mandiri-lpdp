@@ -1,0 +1,15 @@
+.side-nav-container {
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+.mat-drawer-side {
+    border-right: solid 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+.mat-drawer-container {
+    background-color: #EFF3F8 !important;
+}

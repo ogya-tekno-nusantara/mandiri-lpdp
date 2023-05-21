@@ -1,0 +1,96 @@
+<div class="flex align-items-center justify-content-between breadcumb-custom">
+    <h4 class="text-lg font-bold">Buat Transaksi</h4>
+    <p-breadcrumb class="max-w-full" [model]="breadcumbdItems" [home]="home"></p-breadcrumb>
+</div>
+
+<div class="grid p-5">
+
+    <div class="col-12 md:col-12">
+        <div class="custom-card">
+            <div class="grid">
+                <div class="col-12">
+                    <table border="1" class="w-full" style="border: 0.1px solid #dee4ea;">
+                        <tr>
+                            <td class="w-4 p-4">Bank</td>
+                            <td class="p-4">
+                                <p-dropdown class="p-inputtext-sm" [style]="{'width':'100%'}" [options]="bankDataOpt" [(ngModel)]="bankOpt"></p-dropdown>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-4 p-4">Rekening</td>
+                            <td class="p-4">
+                                <p-dropdown class="p-inputtext-sm" [style]="{'width':'100%'}" [options]="rekeningDataOpt" [(ngModel)]="rekeningOpt"></p-dropdown>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-12 overflow-hidden">
+                    <div>
+                        <table border="1" class="md:w-full form-table">
+                            <thead style="background-color: #EFF3F8;">
+                                <tr>
+                                    <th style="width: 190px;">Tanggal</th>
+                                    <th style="width: 150px;">Mutasi</th>
+                                    <th style="width: 280px;">Nominal</th>
+                                    <th style="width: 180px;">Channel</th>
+                                    <th style="width: px;">Keterangan</th>
+                                    <th style="width: 180px;">Sumber Dana</th>
+                                    <th style="width: 100px;">Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+    
+                        <table border="1" class="md:w-full form-table mt-4">
+                            <tbody>
+                                <ng-container *ngFor="let data of config.data; let i = index">
+                                    <tr>
+                                        <td style="width: 190px;">
+                                            <p-calendar class="p-inputtext-sm" [style]="{'width':'100%'}" id="date" [(ngModel)]="date" dateFormat="yy-mm-dd" [readonlyInput]="true" inputId="icon"></p-calendar>
+                                        </td>
+                                        <td style="width: 150px;">
+                                            <ng-container *ngFor="let category of categories">
+                                                <div style="align-items: center; display: flex;">
+                                                    <p-radioButton [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedCategory"></p-radioButton>
+                                                    <label [for]="category.key" class="ml-2 mt-2">{{ category.name }}</label>
+                                                </div>
+                                            </ng-container>
+                                        </td>
+                                        <td style="width: 280px;">
+                                            <div class="p-inputgroup p-inputtext-sm">
+                                                <span class="p-inputgroup-addon font-semibold">Rp</span>
+                                                <input type="text" pInputText placeholder="00" [style]="{'width':'100%'}" [(ngModel)]="amount" />
+                                            </div>
+                                        </td>
+                                        <td style="width: 180px;">
+                                            <p-dropdown class="p-inputtext-sm" [style]="{'width':'100%'}" [options]="channelDataOpt" [(ngModel)]="channelOpt"></p-dropdown>
+                                        </td>
+                                        <td style="width: px;">
+                                            <input type="text" pInputText class="p-inputtext-sm" [style]="{'width':'100%'}" placeholder="Keterangan" [(ngModel)]="desc" />
+                                        </td>
+                                        <td style="width: 180px;">
+                                            <p-dropdown class="p-inputtext-sm" [style]="{'width':'100%'}" [options]="SourceFundDataOpt" [(ngModel)]="SourceFundOpt"></p-dropdown>
+                                        </td>
+                                        <td style="width: 100px;">
+                                            <p-button icon="pi pi-trash" styleClass="p-button-danger p-button-sm" (click)="onRemoveItems(i)"></p-button>
+                                        </td>
+                                    </tr>
+                                </ng-container>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-2 flex" style="padding-top: 39.5px;">
+                    <div class="mr-2">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm w-full"  (click)="onAddItems()"></p-button>
+                    </div>
+                    <div>
+                        <p-button icon="pi pi-save" label="Save" styleClass="p-button-sm w-full" ></p-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

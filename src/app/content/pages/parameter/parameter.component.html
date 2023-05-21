@@ -1,0 +1,281 @@
+<div class="flex align-items-center justify-content-between breadcumb-custom">
+    <h4 class="text-lg font-bold">Parameter</h4>
+    <p-breadcrumb class="max-w-full" [model]="breadcumbdItems" [home]="home"></p-breadcrumb>
+</div>
+
+<div class="grid p-5">
+
+    <div class="col-12 md:col-6">
+        <div class="custom-card">
+            <h4 class="text-lg ml-2 mb-4 font-semibold">Categories</h4>
+            <div class="grid">
+                <div class="col-12">
+                    <div class="mb-2 flex justify-content-between">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm p-button-primary"></p-button>
+                        <div>
+                            <div class="p-inputgroup">
+                                <input type="text" pInputText placeholder="Cari" />
+                                <button type="button" pButton icon="pi pi-search" styleClass="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p-table [value]="dataAccount" styleClass="p-datatable-striped" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>Nama Kategori</th>
+                                    <th>Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-data>
+                                <tr>
+                                    <td>Kategori deskripsi</td>
+                                    <td style="width: 150px;">
+                                        <p-button icon="pi pi-pencil" styleClass="p-button-outlined p-button-primary p-button-sm mr-1"></p-button>
+                                        <p-button icon="pi pi-trash" styleClass="p-button-outlined p-button-danger p-button-sm mr-1"></p-button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <div class="custom-card">
+            <h4 class="text-lg ml-2 mb-4 font-semibold">Business Partner Code</h4>
+            <div class="grid">
+                <div class="col-12">
+                    <div class="mb-2 flex justify-content-between">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm p-button-primary"></p-button>
+                        <div>
+                            <div class="p-inputgroup">
+                                <input type="text" pInputText placeholder="Cari" />
+                                <button type="button" pButton icon="pi pi-search" styleClass="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p-table [value]="dataAccount" styleClass="p-datatable-striped" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>Business Partner Code</th>
+                                    <th>Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-data>
+                                <tr>
+                                    <td>Deskripsi</td>
+                                    <td style="width: 150px;">
+                                        <p-button icon="pi pi-pencil" styleClass="p-button-outlined p-button-primary p-button-sm mr-1"></p-button>
+                                        <p-button icon="pi pi-trash" styleClass="p-button-outlined p-button-danger p-button-sm mr-1"></p-button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <div class="custom-card">
+            <h4 class="text-lg ml-2 mb-4 font-semibold">Master COA</h4>
+            <div class="grid">
+                <div class="col-12">
+                    <div class="mb-2 flex justify-content-between">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm p-button-primary"></p-button>
+                        <div>
+                            <div class="p-inputgroup">
+                                <input type="text" pInputText placeholder="Cari" />
+                                <button type="button" pButton icon="pi pi-search" styleClass="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p-table [value]="dataAccount" styleClass="p-datatable-striped" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>Master COA</th>
+                                    <th>Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-data>
+                                <tr>
+                                    <td>Deskripsi</td>
+                                    <td style="width: 150px;">
+                                        <p-button icon="pi pi-pencil" styleClass="p-button-outlined p-button-primary p-button-sm mr-1"></p-button>
+                                        <p-button icon="pi pi-trash" styleClass="p-button-outlined p-button-danger p-button-sm mr-1"></p-button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <div class="custom-card">
+            <h4 class="text-lg ml-2 mb-4 font-semibold">Posting Profile Code</h4>
+            <div class="grid">
+                <div class="col-12">
+                    <div class="mb-2 flex justify-content-between">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm p-button-primary"></p-button>
+                        <div>
+                            <div class="p-inputgroup">
+                                <input type="text" pInputText placeholder="Cari" />
+                                <button type="button" pButton icon="pi pi-search" styleClass="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p-table [value]="dataAccount" styleClass="p-datatable-striped" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>Posting Profile Code</th>
+                                    <th>Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-data>
+                                <tr>
+                                    <td>Deskripsi</td>
+                                    <td style="width: 150px;">
+                                        <p-button icon="pi pi-pencil" styleClass="p-button-outlined p-button-primary p-button-sm mr-1"></p-button>
+                                        <p-button icon="pi pi-trash" styleClass="p-button-outlined p-button-danger p-button-sm mr-1"></p-button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <div class="custom-card">
+            <h4 class="text-lg ml-2 mb-4 font-semibold">GL Code</h4>
+            <div class="grid">
+                <div class="col-12">
+                    <div class="mb-2 flex justify-content-between">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm p-button-primary"></p-button>
+                        <div>
+                            <div class="p-inputgroup">
+                                <input type="text" pInputText placeholder="Cari" />
+                                <button type="button" pButton icon="pi pi-search" styleClass="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p-table [value]="dataAccount" styleClass="p-datatable-striped" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>GL Code</th>
+                                    <th>Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-data>
+                                <tr>
+                                    <td>Deskripsi</td>
+                                    <td style="width: 150px;">
+                                        <p-button icon="pi pi-pencil" styleClass="p-button-outlined p-button-primary p-button-sm mr-1"></p-button>
+                                        <p-button icon="pi pi-trash" styleClass="p-button-outlined p-button-danger p-button-sm mr-1"></p-button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <div class="custom-card">
+            <h4 class="text-lg ml-2 mb-4 font-semibold">Budget Item Code</h4>
+            <div class="grid">
+                <div class="col-12">
+                    <div class="mb-2 flex justify-content-between">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm p-button-primary"></p-button>
+                        <div>
+                            <div class="p-inputgroup">
+                                <input type="text" pInputText placeholder="Cari" />
+                                <button type="button" pButton icon="pi pi-search" styleClass="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p-table [value]="dataAccount" styleClass="p-datatable-striped" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>Budget Item Code</th>
+                                    <th>Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-data>
+                                <tr>
+                                    <td>Deskripsi</td>
+                                    <td style="width: 150px;">
+                                        <p-button icon="pi pi-pencil" styleClass="p-button-outlined p-button-primary p-button-sm mr-1"></p-button>
+                                        <p-button icon="pi pi-trash" styleClass="p-button-outlined p-button-danger p-button-sm mr-1"></p-button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <div class="custom-card">
+            <h4 class="text-lg ml-2 mb-4 font-semibold">Departement Code</h4>
+            <div class="grid">
+                <div class="col-12">
+                    <div class="mb-2 flex justify-content-between">
+                        <p-button icon="pi pi-plus" label="Add" styleClass="p-button-sm p-button-primary"></p-button>
+                        <div>
+                            <div class="p-inputgroup">
+                                <input type="text" pInputText placeholder="Cari" />
+                                <button type="button" pButton icon="pi pi-search" styleClass="p-button-secondary"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p-table [value]="dataAccount" styleClass="p-datatable-striped" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th>Departement Code</th>
+                                    <th>Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-data>
+                                <tr>
+                                    <td>Deskripsi</td>
+                                    <td style="width: 150px;">
+                                        <p-button icon="pi pi-pencil" styleClass="p-button-outlined p-button-primary p-button-sm mr-1"></p-button>
+                                        <p-button icon="pi pi-trash" styleClass="p-button-outlined p-button-danger p-button-sm mr-1"></p-button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

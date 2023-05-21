@@ -1,0 +1,10 @@
+<mat-drawer-container class="side-nav-container" autosize>
+    <mat-drawer #sidenav mode="side" disableClose="true" opened>
+        <app-sidebar (sidenavToggleClose)="sidenav.toggle()"></app-sidebar>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <app-navbar (sidenavToggle)="sidenav.toggle()" [actionTriger]="sidenav"></app-navbar>
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>
